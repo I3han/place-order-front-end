@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercise - 3</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center">Exercise - Place Order
+            <button id="btnNewOrder" class="btn btn-success"><i class="fas fa-plus"></i> New Order</button>
+        </h1>
+        <div class="row">
+            <div id="col1" class="col-md-4">
+                <div id="order-details" class="alert alert-warning">
+                    <div>Order ID: <label id="lblOrderId">P001</label></div>
+                    <div>Order Date: <label id="lblOrderDate"></label></div>
+                    <div>Order time: <label id="lblOrderTime"></label></div>
+                </div>
+                <div class="alert alert-primary">
+                    <div class="form-group">
+                        Customer ID:
+                        <select id="cmbCustomerID" class="form-control">
+                            <option selected disabled hidden value="selectCID">Select Customer ID</option>
+                        </select>
+                    </div>
+                    <div>Customer Name: <label id="lblCustomerName"></label></div>
+                </div>
+                <div id="item-container" class="alert alert-dark">
+                    <div class="form-group">
+                        Item Code:
+                        <select id="cmbItemCode" class="form-control">
+                            <option selected disabled hidden value="selectItem" id="op2">Select Item Code</option>
+                        </select>
+                    </div>
+                    <div id="item-details">
+                        <div>Item Description: <label id="lblItemDescription"></label></div>
+                        <div>Unit Price: <label id="lblUnitPrice"></label></div>
+                        <div>Qty. On Hand: <label id="lblQtyOnHand"></label></div>
+                    </div>
+                    <div class="form-group">
+                        Qty.
+                        <input class="form-control" type="number" id="txtQty" min="1">
+                    </div>
+                    <div>
+                        <button id="btnAddCart" class="btn btn-warning"> <i class="fas fa-cart-plus"></i> Add to Cart</button>
+                        <button id="btnUpdate" class="btn btn-warning updatedata"> Update</button>
+                    </div>
+                </div>
+
+            </div>
+            <div id="col2" class="col-md-8">
+                <div class="alert alert-success">
+                    <br>
+                    <div id="tblContainer" class="table-dark">
+                        <table id="tblOrderDetails" class="table table-hover table-dark" >
+                            <thead>
+                                <tr>
+                                    <th class="text-center">Item Code</th>
+                                    <th>Description</th>
+                                    <th class="text-right">Unit Price</th>
+                                    <th class="text-center">Qty</th>
+                                    <th class="text-right">Total</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody id="tblbdy1">
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <span id="spnTotal">Total: <label id="lblTotal">0.00</label></span>
+                        <button id="btnPlaceOrder" class="btn btn-primary"> <i class="fas fa-cart-arrow-down"></i>
+                            Place Order</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <h3 class="text-center">Order Details</h3>
+            </div>
+            <table id="tblOrders" class="table table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th class="text-center">Order ID</th>
+                        <th class="text-center">Order Date</th>
+                        <th class="text-center">Customer ID</th>
+                        <th>Customer Name</th>
+                        <th class="text-right">Order Total</th>
+                    </tr>
+                </thead>
+                <tbody id="tblbdy2">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/in-mem-db.js"></script>
+    <script src="js/date-formatter.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+*{
+    font-family: 'Open Sans', sans-serif;
+}
+
+label{
+    margin-bottom: 0;
+}
+
+body>div.container{
+    margin-top: 10px;
+}
+
+body>div.container h1{
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.container>.row:last-child{
+    margin-top: 50px;
+}
+
+.container>.row:last-child table{
+    margin-top: 20px;
+}
+
+#order-details>div,#item-details>div{
+    margin-bottom: 10px;
+}
+
+#col1{
+    font-size: 0.8em;
+}
+
+#col2 .alert{
+    min-height: 530px;
+}
+
+#col2 #tblContainer{
+    height: 440px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    overflow-y: scroll;
+}
+
+#col2 table{
+    border-radius: 5px;
+}
+
+#col2 #btnPlaceOrder{
+    float: right;
+    padding: 10px;
+}
+
+#spnTotal{
+    color: black;
+    font-size: 2em;
+}
+
+#col2 table th{
+    border-top: none;
+}
+
+#col2 table tbody td{
+    height: 75px;
+    vertical-align: middle;
+}
+
+#item-container>div:last-child{
+    text-align: center;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.text-right{
+    text-align: right;
+}
+
+#btnNewOrder{
+    position: absolute;
+    left: 0;
+    top: 10px;
+}
+
+table tbody tr{
+    cursor: pointer;
+}
+
+.icon-delete{
+    width: 48px;
+    height: 48px;
+    background-image: url('../images/recyclebin.png');
+    background-size: contain;
+    background-position: center;
+}
+
+.icon-delete:hover:not(.icon-disabled){
+    background-image: url('../images/recyclebin-hover.png');
+}
+
+.icon-disabled{
+    filter: grayscale(100%);
+}
+
+.invalid-qty{
+    border: 1px solid red !important;
+}
